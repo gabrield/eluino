@@ -75,5 +75,11 @@ function bit(n)
     return pow(n, 2)
 end
 
+function constrain(x, a, b)
+    if ((x > a) and (x < b)) then return x
+    elseif x < a  then return a else return b
+    end
+end
+
 
 
