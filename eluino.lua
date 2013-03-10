@@ -32,17 +32,14 @@ function digitalWrite(pin, val)
     val(pin)
 end
 
-
 function delay(time)
     tmr.delay(0 ,time*10*10*10)
 end
-
 
 function analogWrite(pwmid, val)
     pwm.setup(pwmid, 50000, val)
     pwm.start(pwmid)
 end
-
 
 function bitRead(x, n)
     if bit.isset(x, n) then
@@ -52,7 +49,6 @@ function bitRead(x, n)
     end
 end
 
-
 function bitWrite(x, n, b)
     if b == 0 then
         bit.clear(x, n)
@@ -61,7 +57,6 @@ function bitWrite(x, n, b)
         bit.set(x, n)
     end
 end
-
 
 function bitSet(x, n)
     bitWrite(x, n, 1)
@@ -80,6 +75,4 @@ function constrain(x, a, b)
     elseif x < a  then return a else return b
     end
 end
-
-
 
